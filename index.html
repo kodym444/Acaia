@@ -1369,7 +1369,8 @@
           })
         });
         const data = await res.json();
-        const url = data?.data?.cartCreate?.cart?.checkoutUrl;
+        const rawUrl = data?.data?.cartCreate?.cart?.checkoutUrl;
+        const url = rawUrl ? rawUrl.replace('https://www.acaia.com.au', 'https://acaia-2.myshopify.com').replace('https://acaia.com.au', 'https://acaia-2.myshopify.com') : null;
         if (url) {
           window.location.href = url;
         } else {
