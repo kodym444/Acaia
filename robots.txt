@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://acaia.com.au/sitemap.xml
